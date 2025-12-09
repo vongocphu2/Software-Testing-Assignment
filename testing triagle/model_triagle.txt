@@ -1,0 +1,18 @@
+# --- 1. KHAI BAO BIEN (PARAMETERS) ---
+# Dua tren phan tich bien [1, 100] va logic nghiep vu
+
+# 0: Gia tri bien duoi khong hop le (Invalid Min)
+# 1: Gia tri bien duoi hop le (Valid Min)
+# 2, 3, 4, 5: Cac gia tri nho dac biet de tao tam giac deu/vuong
+# 50: Gia tri vung giua (Nominal)
+# 100: Gia tri bien tren hop le (Valid Max)
+# 101: Gia tri bien tren khong hop le (Invalid Max)
+
+Canh_A: 0, 1, 2, 3, 4, 5, 50, 100, 101
+Canh_B: 0, 1, 2, 3, 4, 5, 50, 100, 101
+Canh_C: 0, 1, 2, 3, 4, 5, 50, 100, 101
+
+# --- 2. CAC RANG BUOC (CONSTRAINTS) ---
+# Neu A va B da la so duong, thi C cung nen la so duong
+# (De tranh tool sinh ra qua nhieu dong toan so 0 vo nghia)
+IF [Canh_A] > 0 AND [Canh_B] > 0 THEN [Canh_C] > 0;

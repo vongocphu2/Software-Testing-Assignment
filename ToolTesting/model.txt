@@ -1,0 +1,7 @@
+Day: 1, 15, 28, 29, 30, 31
+Month: 1, 2, 4, 6, 12
+Year: 1812, 2000, 2001, 2030
+
+IF [Month] = 2 THEN [Day] <= 29;
+IF [Month] in {4, 6} THEN [Day] <= 30;
+IF [Month] = 2 AND [Day] = 29 THEN [Year] = 2000;
